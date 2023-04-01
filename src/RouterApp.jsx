@@ -1,12 +1,12 @@
 import { Navigate, Route, Routes } from "react-router-dom"
-import { HomePage } from "./pages/HomePage"
-import { AboutPage } from "./pages/AboutPage"
-import { LoginPage } from "./pages/LoginPage"
+import { HomePage, AboutPage, LoginPage } from "./pages"
+import { Navbar } from "./components/Navbar"
 
 export const RouterApp = () => {
   return (
     <>
       <h1>RouterApp</h1>
+      <Navbar />
       <hr />
 
       <Routes>
@@ -16,7 +16,6 @@ export const RouterApp = () => {
 
         {/* <Route path="/*" element={ <LoginPage /> } /> */}
         <Route path="/*" element={ <Navigate to="/about" /> } />
-
       </Routes>
 
     </>
